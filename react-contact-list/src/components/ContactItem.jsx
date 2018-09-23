@@ -27,11 +27,11 @@ class ContactItem extends Component {
   }
 
   toggleEditing() {
-    let userIsEditing = !this.state.userIsEditing;
+    var userIsEditing = true;
     this.setState({
       userIsEditing: userIsEditing
     })
-    this.handleSave()
+    
   }
 
   render() {
