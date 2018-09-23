@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {firebaseApp} from '../firebase';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
+import { Link } from 'react-router';
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
         <h3>Contacts</h3>
 
         <div> Add Contacts </div>
+                <Link to= "/edit"> edit Contacts </Link>
         <AddContact />
         Contact List:
         <ContactList />

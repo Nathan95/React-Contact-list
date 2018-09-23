@@ -12,4 +12,4 @@ import * as firebase from 'firebase';
 
   export const firebaseApp = firebase.initializeApp(config);
   export const detailsRef = firebase.database().ref('details');
-  export const deleteContactRef = firebase.database().ref('completeGoals');
+  export const deleteContactRef = firebase.database().ref('deletedContacts');
