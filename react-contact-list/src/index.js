@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { firebaseApp } from './firebase';
 import {logUser} from './actions';
+import Root from 'Root';
 import reducer from './reducers';
 
 import App from './components/App';
@@ -29,12 +30,12 @@ firebaseApp.auth().onAuthStateChanged(user => {
 
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Root>
     <Router path="/" history={browserHistory}>
       <Route path="/app" component={App} />
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/edit" component={EditContacts} />
     </Router>
-  </Provider>, document.getElementById('root')
+  </Root>, document.getElementById('root')
 )

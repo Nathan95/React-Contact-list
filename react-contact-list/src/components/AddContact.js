@@ -16,7 +16,7 @@ class AddContact extends Component {
   }
 
   addContact(){
-      if(this.state.firstname == ""){
+      if(this.state.firstname === ""){
           alert("Form must be filled out.")
       } else {
         const { firstname } = this.state;
