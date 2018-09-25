@@ -2,6 +2,7 @@ import reducer_contacts from 'reducers/reducer_contacts';
 import { CREATE_CONTACT } from 'actions/types';
 
 it('handles actions of type CREATE_CONTACT', () => {
+  //passing a fake action to test reducer
   const action = {
   type: CREATE_CONTACT,
   payload: 'New contact'
