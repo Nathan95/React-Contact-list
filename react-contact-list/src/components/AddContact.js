@@ -46,11 +46,12 @@ class AddContact extends Component {
             onChange={event => this.setState({lastname: event.target.value})}
         />
 
-          <input
+          <textarea
             type="text"
             placeholder="Address"
             className="form-control"
             style={{marginRight: '5px'}}
+            value={this.state.address}
             onChange={event => this.setState({address: event.target.value})}
         />
 

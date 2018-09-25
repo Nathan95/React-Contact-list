@@ -17,10 +17,13 @@ class App extends Component {
         <h3>Contacts</h3>
 
         <div> Add Contacts </div>
-                <Link to= "/edit"> edit Contacts </Link>
+
         <AddContact />
         Contact List:
         <ContactList />
+      
+        <Link to= "/edit"> Edit Contacts </Link>
+        <br />
         <button
           className="btn btn-danger"
           onClick={() => this.signOut()}
