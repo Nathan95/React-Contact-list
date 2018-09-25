@@ -10,19 +10,22 @@ class AddContact extends Component {
       firstname: '',
       lastname: '',
       address: '',
-      phone: ''
-
+      phone: '',
+      error: ''
     }
   }
 
   addContact(){
-    console.log("this.state", this.state);
-    const { firstname } = this.state;
-    const { lastname } = this.state;
-    const { address } = this.state;
-    const { phone } = this.state;
-    const { email} = this.props.user;
-    detailsRef.push({email: email, firstname, lastname, address, phone})
+      if(this.state.firstname == ""){
+          alert("Form must be filled out.")
+      } else {
+        const { firstname } = this.state;
+        const { lastname } = this.state;
+        const { address } = this.state;
+        const { phone } = this.state;
+        const { email} = this.props.user;
+        detailsRef.push({email: email, firstname, lastname, address, phone})
+    }
   }
 
   render(){

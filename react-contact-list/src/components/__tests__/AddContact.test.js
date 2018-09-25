@@ -33,5 +33,6 @@ it('the input', () => {
 
   wrapped.update();
 
-    expect(wrapped.find('textarea').prop('value')).toEqual('London');
+  expect(wrapped.find('textarea').prop('value')).toEqual('London');
+
 });
