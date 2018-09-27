@@ -1,6 +1,10 @@
 # React-Contact-list
 
-npm start 
+This project was wrapped with create-react-app
+
+npm start
+
+npm install
 
 Simple react contact list with react and firebase.
 
