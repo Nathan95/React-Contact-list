@@ -27,7 +27,7 @@ class ContactItem extends Component {
               <td><strong>Last name: </strong>{lastname}</td>
               <td><strong>Address: </strong>{address}</td>
               <td><strong>Phone: </strong>{phone}</td>
-              <td><strong>Added by: </strong>{email}</td>
+              
               <td><button onClick={() => this.deleteContact()} className="btn btn-sm btn-danger">Delete Contact</button></td>
             </tr>
           </tbody>
