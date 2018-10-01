@@ -15,6 +15,7 @@ class AddContact extends Component {
     }
   }
 
+
   addContact(){
       if(this.state.firstname === ""){
           alert("Form must be filled out.")
@@ -30,50 +31,53 @@ class AddContact extends Component {
 
   render(){
     return (
+
       <div className="form-inline">
         <div className="form-group">
-          <input
-            type="text"
-            placeholder="Firstname"
-            className="form-control"
-            style={{marginRight: '5px'}}
-            onChange={event => this.setState({firstname: event.target.value})}
-        />
+        <form>
+            <input
+              type="text"
+              placeholder="Firstname"
+              className="form-control"
+              style={{marginRight: '5px'}}
+              onChange={event => this.setState({firstname: event.target.value})}
+          />
 
 
-          <input
-            type="text"
-            placeholder="Lastname"
-            className="form-control"
-            style={{marginRight: '5px'}}
-            onChange={event => this.setState({lastname: event.target.value})}
-        />
+            <input
+              type="text"
+              placeholder="Lastname"
+              className="form-control"
+              style={{marginRight: '5px'}}
+              onChange={event => this.setState({lastname: event.target.value})}
+          />
 
-          <textarea
-            type="text"
-            placeholder="Address"
-            className="form-control"
-            style={{marginRight: '5px'}}
-            value={this.state.address}
-            onChange={event => this.setState({address: event.target.value})}
-        />
+            <textarea
+              type="text"
+              placeholder="Address"
+              className="form-control"
+              style={{marginRight: '5px'}}
+              value={this.state.address}
+              onChange={event => this.setState({address: event.target.value})}
+          />
 
 
-          <input
-            type="text"
-            placeholder="Phone"
-            className="form-control"
-            style={{marginRight: '5px'}}
-            onChange={event => this.setState({phone: event.target.value})}
-        />
+            <input
+              type="text"
+              placeholder="Phone"
+              className="form-control"
+              style={{marginRight: '5px'}}
+              onChange={event => this.setState({phone: event.target.value})}
+          />
 
-          <button
-            className="btn btn-success"
-            type="button"
-            onClick={() => this.addContact()}
-          >
-            Submit
-          </button>
+            <button
+              className="btn btn-success"
+              type="button"
+              onClick={() => this.addContact()}
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     )

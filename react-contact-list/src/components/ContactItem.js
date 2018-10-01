@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { deleteContactRef, detailsRef } from '../firebase';
 import { connect } from 'react-redux';
+import { Table } from 'react-bootstrap';
 
 class ContactItem extends Component {
 
@@ -18,19 +19,19 @@ class ContactItem extends Component {
 
     return (
 
-      <div style={{margin:'5px'}}>
-        <strong>Firstname:</strong> {firstname}
-        <strong>Lastname:</strong> {lastname}
-        <strong>Address:</strong> {address}
-        <strong>Phone:</strong> {phone}
-        <strong>Added by:</strong>{email}
-
-        <button
-          onClick={() => this.deleteContact()}
-          className="btn btn-sm btn-danger"
-        >
-        Delete
-        </button>
+      <div className="container" style={{margin:'5px'}}>
+      <Table striped bordered condensed hover>
+        <tbody>
+          <tr>
+              <td><strong>Firstname: </strong> {firstname}</td>
+              <td><strong>Last name: </strong>{lastname}</td>
+              <td><strong>Address: </strong>{address}</td>
+              <td><strong>Phone: </strong>{phone}</td>
+              <td><strong>Added by: </strong>{email}</td>
+              <td><button onClick={() => this.deleteContact()} className="btn btn-sm btn-danger">Delete Contact</button></td>
+            </tr>
+          </tbody>
+        </Table>
 
       </div>
     )

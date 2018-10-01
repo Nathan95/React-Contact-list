@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { detailsRef } from '../firebase';
 import { createContact } from '../actions';
 import ContactItem from './ContactItem';
+import {Table } from 'react-bootstrap';
 
 
 class ContactList extends Component {
@@ -11,7 +12,7 @@ class ContactList extends Component {
     detailsRef.on('value', snap => {
       let contacts = [];
       snap.forEach(contact => {
-          
+
         const {email, firstname, lastname, address, phone} = contact.val();
         const serverKey = contact.key;
         contacts.push({email, firstname, lastname, address, phone, serverKey});

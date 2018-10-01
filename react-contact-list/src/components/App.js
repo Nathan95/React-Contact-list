@@ -19,10 +19,14 @@ class App extends Component {
         <div> Add Contacts </div>
 
         <AddContact />
-        Contact List:
+        <h3> Contact List</h3>
         <ContactList />
-      
-        <Link to= "/edit"> Edit Contacts </Link>
+
+        <Link to= "/edit">
+          <h3>
+            Edit Contacts >
+         </h3>
+         </Link>
         <br />
         <button
           className="btn btn-danger"
