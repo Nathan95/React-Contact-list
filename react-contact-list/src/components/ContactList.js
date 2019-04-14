@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import { detailsRef } from '../firebase';
 import { createContact } from '../actions';
 import ContactItem from './ContactItem';
-import {Table } from 'react-bootstrap';
 
 
 class ContactList extends Component {
-
   componentDidMount(){
     detailsRef.on('value', snap => {
       let contacts = [];

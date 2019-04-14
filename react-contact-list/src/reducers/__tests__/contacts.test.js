@@ -1,4 +1,4 @@
-import reducer_contacts from 'reducers/reducer_contacts';
+import reducer_contacts from '../reducer_contacts';
 import { CREATE_CONTACT } from 'actions/types';
 
 it('handles actions of type CREATE_CONTACT', () => {
